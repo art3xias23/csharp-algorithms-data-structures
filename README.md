@@ -1,5 +1,5 @@
 # csharp-algorithms-data-structures
 
-BigO Notation
+**BigO Notation**
 
-![alt-text](./img/BigO.png  "BigO Notation"))
+![alt-text](./img/BigO.png  "BigO Notation")
