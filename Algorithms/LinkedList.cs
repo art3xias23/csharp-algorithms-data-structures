@@ -77,6 +77,17 @@ internal class LinkedList<T>
 		    currentPosition++;
 	    }
     }
+
+    internal bool Find(T data){
+	    var item = Head;
+	    while(item is not null){
+		    if (item.Data.Equals(data)){
+			    return true;
+		    }
+		    item = item.Next;
+	    }
+	    return false;
+    }
 }
 
 internal class Node<T>
