@@ -1,0 +1,5 @@
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.AssemblyInfoInputs.cache
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.AssemblyInfo.cs
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.csproj.CoreCompileInputs.cache
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.sourcelink.json
