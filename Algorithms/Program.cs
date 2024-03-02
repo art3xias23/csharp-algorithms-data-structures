@@ -15,9 +15,9 @@ void PrintNode<T>( Node<T> node){
 Console.WriteLine("Hello");
 
 var list = new LinkedList<string>();
-list.insertAtStart(new Node<string>("Item3"));
-list.insertAtStart(new Node<string>("Item2"));
-list.insertAtStart(new Node<string>("Item1"));
-list.deleteFirstByValue("Item1");
+list.InsertAtStart(new Node<string>("Item3"));
+list.InsertAtStart(new Node<string>("Item2"));
+list.InsertAtStart(new Node<string>("Item1"));
+list.DeleteByPosition(0);
 
 PrintList<string>(list);

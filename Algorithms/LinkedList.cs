@@ -2,7 +2,7 @@ internal class LinkedList<T>
 {
     internal Node<T> Head;
 
-    internal void insertAtStart(Node<T> item)
+    internal void InsertAtStart(Node<T> item)
     {
         if (Head == null)
         {
@@ -14,7 +14,7 @@ internal class LinkedList<T>
         Head = item;
     }
 
-    internal void insertAtEnd(Node<T> item)
+    internal void InsertAtEnd(Node<T> item)
     {
         if (Head == null)
         {
@@ -32,7 +32,7 @@ internal class LinkedList<T>
         currentItem.Next = item;
     }
 
-    internal void deleteFirstByValue(T data)
+    internal void DeleteFirstByValue(T data)
     {
 
         if (Head == null)
@@ -55,6 +55,27 @@ internal class LinkedList<T>
 		item = item.Next;
 	}
 
+    }
+
+    internal void DeleteByPosition(int pos){
+	    var currentPosition = 0;
+	    var item = Head;
+	    Node<T> prevItem = null;
+
+	    while(item is not null){
+		    if(pos == currentPosition){
+			if(prevItem == null){
+				Head = item.Next;
+				return;
+			}
+
+			prevItem.Next = item.Next;
+			return;
+		    }
+		    prevItem = item;
+		    item = item.Next;
+		    currentPosition++;
+	    }
     }
 }
 
