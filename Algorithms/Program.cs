@@ -1,6 +1,7 @@
 void PrintList<T>(LinkedList<T> list){
 	var head = list.Head;
-	PrintNode(head);
+	if(head is not null)
+		PrintNode(head);
 }
 
 void PrintNode<T>( Node<T> node){
@@ -11,13 +12,12 @@ void PrintNode<T>( Node<T> node){
 		PrintNode(node.Next);
 }
 
-Console.WriteLine("Helo");
+Console.WriteLine("Hello");
 
 var list = new LinkedList<string>();
-list.insertAtStart(new Node<string>("Item 2"));
+list.insertAtStart(new Node<string>("Item3"));
+list.insertAtStart(new Node<string>("Item2"));
+list.insertAtStart(new Node<string>("Item1"));
+list.deleteFirstByValue("Item1");
 
-list.insertAtEnd(new Node<string>("Item 3"));
-list.insertAtEnd(new Node<string>("Item 4"));
-list.insertAtEnd(new Node<string>("Item 5"));
-list.insertAtStart(new Node<string>("Item 1"));
 PrintList<string>(list);
