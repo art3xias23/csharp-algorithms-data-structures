@@ -3,3 +3,13 @@
 /mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.AssemblyInfo.cs
 /mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.csproj.CoreCompileInputs.cache
 /mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.sourcelink.json
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/bin/Debug/net8.0/Algorithms
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/bin/Debug/net8.0/Algorithms.deps.json
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/bin/Debug/net8.0/Algorithms.runtimeconfig.json
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/bin/Debug/net8.0/Algorithms.dll
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/bin/Debug/net8.0/Algorithms.pdb
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.dll
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/refint/Algorithms.dll
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.pdb
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/Algorithms.genruntimeconfig.cache
+/mnt/c/Users/kmilchev/Desktop/Code/C#/csharp-algorithms-data-structures/Algorithms/obj/Debug/net8.0/ref/Algorithms.dll
