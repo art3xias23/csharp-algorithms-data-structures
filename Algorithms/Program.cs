@@ -1,7 +1,13 @@
-void PrintList<T>(LinkedList<T> list){
+void PrintList<T>(DoublyLinkedList<T> list){
+	Console.WriteLine($"Count: {list.Count}");
 	var head = list.Head;
 	if(head is not null)
 		PrintNode(head);
+}
+void PrintListReverse<T>(DoublyLinkedList<T> list){
+	var tail = list.Tail;
+	if(tail is not null)
+		PrintNodeReverse(tail);
 }
 
 void PrintNode<T>( Node<T> node){
@@ -12,12 +18,18 @@ void PrintNode<T>( Node<T> node){
 		PrintNode(node.Next);
 }
 
-Console.WriteLine("Hello");
+void PrintNodeReverse<T>( Node<T> node){
+	Console.Write("Data: ");
+	Console.WriteLine(node.Data);
+	Console.WriteLine("-------------------");
+	if(node.Prev != null)
+		PrintNodeReverse(node.Prev);
+}
 
-var list = new LinkedList<string>();
-list.InsertAtStart(new Node<string>("Item3"));
-list.InsertAtStart(new Node<string>("Item2"));
-list.InsertAtStart(new Node<string>("Item1"));
-list.DeleteByPosition(0);
 
-PrintList<string>(list);
+var list = new DoublyLinkedList<string>();
+list.InsertAtStart("Item2");
+list.InsertAtStart("Item1");
+list.InsertAtEnd("Item3");
+
+PrintListReverse<string>(list);

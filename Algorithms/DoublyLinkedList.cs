@@ -1,95 +1,146 @@
 internal class DoublyLinkedList<T>
 {
-    private Node<T> head { get; private set; }
-    private Node<T> tail { get; private set; }
+    internal Node<T> Head { get; private set; }
+    internal Node<T> Tail { get; private set; }
     private int count;
     public int Count => count;
 
 
-    void InsertAtStart(T data)
+    internal void InsertAtStart(T data)
     {
-        if (head == null)
+        if (Head == null)
         {
-            head = new Node<T>(data);
-            tail = new Node<T>(data);
+            Head = new Node<T>(data);
+            Tail = new Node<T>(data);
         }
         else
         {
 
-            var temp = head;
-            temp.Next = head;
-            head = temp;
+            var newNode = new Node<T>(data);
+            newNode.Next = Head;
+            Head.Prev = newNode;
+            Head = newNode;
+	    SetTail(Head);
         }
-	count++;
+        count++;
 
 
     }
 
-    void insertAtEnd(T data){
-	    if(tail == null){
-		    tail = new Node<T>(data);
+    private void SetHead(Node<T> node){
+	    if(node == null) return;
+
+	    while(node.Prev is not null){
+		    node = node.Prev;
 	    }
-	    else{
-		    var temp = tail;
-		    temp.Prev = tail;
-		    tail = temp;
-	    }
-	    count++;
+	    Head = node;
     }
 
-    void insertAtPosition(int pos, T data){
-	    var c = 0;
-	    Node<T> currentItem = null;
-	    if(pos ==0){
-		    InsertAtStart(data);
-		    return;
+    private void SetTail(Node<T> node){
+	    if(node == null) return;
+
+	    while(node.Next is not null){
+		    node = node.Next;
 	    }
-
-
-	    // Closer to the start
-	    if(pos  < Count - pos){
-		while(currentItem is not null){
-			if(c == pos){
-
-			}
-		}
-	    }
-	    // Closer to the end 
-	    else{
-
-	    }
-	    while(currentItem is not null){
-		if(currentItem.Next is null){
-			insertAtEnd(data);
-			return;
-		}
-		if(count == pos){
-			var newNode = new Node<T>(data);
-			currentItem
-		}
-	    }
-
-
+	    Tail = node;
     }
 
-    void Delete(int pos)
+    internal void InsertAtEnd(T data)
+    {
+        if (Tail == null)
+        {
+                var newNode = new Node<T>(data);
+            if (Head == null)
+            {
+               Head = newNode; 
+            }
+
+            Tail = newNode; 
+        }
+        else
+        {
+            var newNode = new Node<T>(data);
+            newNode.Prev = Tail;
+            Tail.Next = newNode;
+            Tail = newNode;
+	    SetHead(Tail);
+        }
+        count++;
+    }
+
+    internal void InsertAtPosition(int pos, T data)
+    {
+        var c = 0;
+        Node<T> currentItem = null;
+        if (pos == 0)
+        {
+            InsertAtStart(data);
+            return;
+        }
+
+
+        // Closer to the start
+        if (pos < Count - pos)
+        {
+            while (currentItem is not null)
+            {
+                if (c == Count - pos)
+                {
+                    var newNode = new Node<T>(data);
+                    newNode.Next = currentItem;
+                    newNode.Prev = currentItem.Prev;
+                    currentItem.Prev = newNode;
+                    return;
+                }
+                // Closer to the end 
+                else
+                {
+                    currentItem = currentItem.Next;
+                    c++;
+                }
+            }
+        }
+        else
+        {
+            while (currentItem is not null)
+            {
+                if (c == pos)
+                {
+                    var newNode = new Node<T>(data);
+                    newNode.Next = currentItem;
+                    newNode.Prev = currentItem.Prev;
+                    currentItem.Prev = newNode;
+                    return;
+                }
+                // Closer to the end 
+                else
+                {
+                    currentItem = currentItem.Prev;
+                    c++;
+                }
+            }
+        }
+    }
+
+
+    internal void Delete(int pos)
     {
 
     }
 
-    void Delete(T Data)
+    internal void Delete(T Data)
     {
 
     }
 
-    void Traverse(bool forward = true)
+    internal void Traverse(bool forward = true)
     {
 
     }
 
-    Node<T> Find(T Data)
+    Node<T> Find(T data)
     {
-
+        return new Node<T>(data);
     }
 }
 
